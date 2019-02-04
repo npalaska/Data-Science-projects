@@ -1,5 +1,5 @@
 ## Seattle Airbnb analysis
-###Installation
+### Installation
 
 I used python 3.5 for this project and the following libraries:
 
@@ -24,7 +24,7 @@ Some of the business questions I tried to find answers for:
 I followed the CRISP-DM methodology for researching the answers for these questions which includes intermediary steps 
 towards Data understanding, Data cleaning, Data Pre-processing, Modelling and visualizing the results.
 
-###File Descriptions 
+### File Descriptions 
 
 1. AirBnB_seattle.ipynb: 
 This file contains the code and describes the data science process I took to answer the questions of this project. 
@@ -33,10 +33,10 @@ This file contains the code and describes the data science process I took to ans
 Seattle Airbnb listings . The original source of these
 files is Kaggle. https://www.kaggle.com/airbnb/seattle
 
-###Blog Post
+### Blog Post
 The blog post followed up on these findings: 
 
-###Licensing, Author, Acknowledgements
+### Licensing, Author, Acknowledgements
 
 Thanks to Kaggle for providing dataset!
 

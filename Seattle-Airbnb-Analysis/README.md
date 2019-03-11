@@ -34,7 +34,7 @@ Seattle Airbnb listings . The original source of these
 files is Kaggle. https://www.kaggle.com/airbnb/seattle
 
 ### Blog Post
-The blog post followed up on these findings: 
+The blog post followed up on these findings: https://medium.com/@palaskarnikhil7/airbnb-in-seattle-lets-see-what-data-says-265a7db36ee9 
 
 ### Licensing, Author, Acknowledgements
 

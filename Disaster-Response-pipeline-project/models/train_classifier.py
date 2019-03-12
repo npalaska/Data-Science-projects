@@ -12,7 +12,7 @@ from nltk.corpus import stopwords
 from sklearn.metrics import confusion_matrix
 from sklearn.model_selection import train_test_split
 from sklearn.svm import LinearSVC
-from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer, TfidfVectorizer
+from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
 from sklearn.multioutput import MultiOutputClassifier
 from sklearn.pipeline import Pipeline
 from sklearn.metrics import classification_report, accuracy_score
@@ -29,7 +29,8 @@ def load_data(database_filepath):
     Output:
         X: feature DataFrame
         Y: label DataFrame
-        category_names: labled categories which can be used for visualizing model validations 
+        category_names: labled categories which can be used for visualizing
+        model validations
     """
     
     engine = create_engine('sqlite:///'+database_filepath)
@@ -76,8 +77,10 @@ def build_model():
     '''
     Build the machine learning pipeline. 
     The ML pipeline do the following:
-        1) Feature extraction using the CountVectorizer which Convert a collection of text documents to a matrix of token counts
-        2) Transform the extracted token matrix to a normalized tf-idf representation
+        1) Feature extraction using the CountVectorizer which Convert a
+        collection of text documents to a matrix of token counts
+        2) Transform the extracted token matrix to a normalized tf-idf
+        representation
         3) Building a machine learning model
     '''
     model = Pipeline([
@@ -112,11 +115,15 @@ def evaluate_model(model, X_test, Y_test, category_names):
     """
     Y_pred = model.predict(X_test)
     for i in range(Y_test.shape[1]):
-        accuracy = '%25s accuracy : %.2f' %(category_names[i], accuracy_score(Y_test[:,i], Y_pred[:,i]))
+        accuracy = '%25s accuracy : %.2f' \
+                   %(category_names[i],
+                     accuracy_score(Y_test[:,i], Y_pred[:,i]))
         print(accuracy)
     with open('result.log','w') as file:
-        print(classification_report(Y_test, Y_pred, target_names=category_names))
-        file.write(classification_report(Y_test, Y_pred, target_names=category_names))
+        print(classification_report(Y_test, Y_pred,
+                                    target_names=category_names))
+        file.write(classification_report(Y_test, Y_pred,
+                                         target_names=category_names))
     file.close()
 
 

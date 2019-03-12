@@ -57,10 +57,12 @@ def clean_data(df):
         # If so pre-process it so it contains only 2 unique values
         if len(categories[column].unique())>2:
             print("column with more than 2 unique value: ", column)
-            categories[column] = categories[column].apply(lambda x:1 if x>1 else 0)
+            categories[column] = \
+                categories[column].apply(lambda x:1 if x>1 else 0)
         
         # Check if the category has only one value
-        # If so remove that category since it does not add any valuable information about the data
+        # If so remove that category since it does not add any valuable
+        # information about the data
         if len(categories[column].unique())==1:
             print("column with only one unique value: ", column)
             categories = categories.drop(column, axis=1)
@@ -88,7 +90,8 @@ def save_data(df, database_filename):
     """
     engine = create_engine('sqlite:///{}'.format(database_filename))
     # save dataframe to database, relace if already exists 
-    df.to_sql('disasterResponseCleaned', engine, index=False, if_exists='replace')  
+    df.to_sql('disasterResponseCleaned', engine, index=False,
+              if_exists='replace')
 
 
 def main():

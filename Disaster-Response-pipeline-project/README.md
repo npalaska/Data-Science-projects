@@ -28,14 +28,14 @@ There are three main files in this project dedicated for their respective tasks:
 given by Figure Eight, merges them, cleans them and stores them into an SQLite
 database.
 
-2. **train_classifer.py**: This script loads the data from the SQLite database, 
-splits the database into training and test sets, builds a text processing 
-and machine learning pipeline, trains and tunes the model using GridSearchCV, 
-outputs the results on the test set, and finally exports the final model as a 
-pickle file.
+2. **train_classifer.py**: This script loads back the data from the SQLite 
+database, splits the database into the respective training and test sets, builds 
+a text-processing and machine learning pipeline, trains and tunes the model 
+using GridSearchCV, outputs the results on the test set, and finally exports the
+final model as a pickle file.
 
-3. **run.py**: This script uses Flask to run the web app. Visualizations are 
-enabled using Plotly.
+3. **run.py**: This script is used by the flask web app and the visualizations 
+are enabled using Plotly.
 
 
 ### Instructions:
